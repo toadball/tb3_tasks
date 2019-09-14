@@ -28,7 +28,6 @@ if (isNil "_owners") then {
     _owners
 ] call BIS_fnc_deleteTask;
 //delete monitoring PFH on the server
-//[0,{ [_this] call CBA_fnc_removePerFrameHandler; }, _monitorPfh] call CBA_fnc_globalExecute;
 [_monitorPfh] remoteExecCall ["CBA_fnc_removePerFrameHandler", 2];
 
 true;
